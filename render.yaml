@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: telegram-thumbnail-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7566739138:AAEXf7azvE8FH9W0cQnFZpytbmGxc-p2_Bc
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: FLOOD_SLEEP_DELAY
+        value: "0.8"
